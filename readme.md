@@ -25,3 +25,8 @@ En el gráfico de pastel (`pie`) y el de líneas (`plot`) se ve clarito que las 
 ### Conclusión 3: A más calor, mayores ventas e ingresos (Gráfico 5)
 
 Al cruzar la temperatura contra las ventas en el gráfico de dispersión (`scatter`), los puntos muestran una relación directa muy clara: entre más alta es la temperatura de la ciudad, más producto se vende. En Bogotá, con temperaturas alrededor de 14°C, los ingresos no pasan de \$1,900 USD, mientras que en Barranquilla, con más de 31°C, los ingresos superan los $4,200 USD. Esto confirma que el clima de cada región es el factor que más influye en las ventas de este negocio.
+---
+
+## 3. Video de Sustentación
+Enlace al video de sustentación en YouTube:
+https://youtu.be/b_OS2esFaYs
