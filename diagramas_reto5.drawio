@@ -1,0 +1,787 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" pages="14">
+  <diagram id="diag_main" name="1. Menú Principal">
+    <mxGraphModel dx="1062" dy="579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="m_start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" value="Inicio (main.py)" vertex="1">
+          <mxGeometry height="36" width="180" x="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m_mkdir" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="Crear carpeta &#39;outputs&#39; si no existe&#xa;Path(&#39;outputs&#39;).mkdir(parents=True, exist_ok=True)" vertex="1">
+          <mxGeometry height="45" width="320" x="170" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="m_init" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="op_p = &#39;&#39;" vertex="1">
+          <mxGeometry height="32" width="160" x="250" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m_while" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="¿op_p != &#39;4&#39;?" vertex="1">
+          <mxGeometry height="55" width="190" x="235" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="m_end" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" value="Fin del programa" vertex="1">
+          <mxGeometry height="36" width="150" x="550" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="m_input" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="Mostrar Menú Principal (1 a 4)&#xa;Leer op_p = input(...)" vertex="1">
+          <mxGeometry height="45" width="300" x="180" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="m_op" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="¿Qué opción eligió?" vertex="1">
+          <mxGeometry height="55" width="190" x="235" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="m_op1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="Llamar explorar_directorio()" vertex="1">
+          <mxGeometry height="40" width="180" x="40" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="m_op2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="Llamar submenu_txt()" vertex="1">
+          <mxGeometry height="40" width="170" x="245" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="m_op3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="Llamar submenu_csv()" vertex="1">
+          <mxGeometry height="40" width="170" x="440" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="e_1" edge="1" parent="1" source="m_start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="m_mkdir" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_2" edge="1" parent="1" source="m_mkdir" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="m_init" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_3" edge="1" parent="1" source="m_init" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="m_while" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_4" edge="1" parent="1" source="m_while" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="m_end" value="No (Salir)">
+          <mxGeometry relative="1" x="-0.004" y="8" as="geometry">
+            <mxPoint x="3" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_5" edge="1" parent="1" source="m_while" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="m_input" value="">
+          <mxGeometry relative="1" x="0.1111" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_6" edge="1" parent="1" source="m_input" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="m_op" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_7" edge="1" parent="1" source="m_op" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="m_op1" value="op_p == &#39;1&#39;">
+          <mxGeometry relative="1" x="-0.1045" y="-18" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_8" edge="1" parent="1" source="m_op" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="m_op2" value="op_p == &#39;2&#39;">
+          <mxGeometry relative="1" x="0.3333" y="-40" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_9" edge="1" parent="1" source="m_op" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="m_op3" value="op_p == &#39;3&#39;">
+          <mxGeometry relative="1" x="-0.0769" y="7" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3fW8cegxriEx2bQQTEbL-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Si" vertex="1">
+          <mxGeometry height="40" width="60" x="340" y="276" as="geometry" />
+        </mxCell>
+        <mxCell id="3fW8cegxriEx2bQQTEbL-3" edge="1" parent="1" source="m_op1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="410" as="sourcePoint" />
+            <mxPoint x="130" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3fW8cegxriEx2bQQTEbL-4" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="329.5" y="530" as="sourcePoint" />
+            <mxPoint x="329.5" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3fW8cegxriEx2bQQTEbL-5" edge="1" parent="1" source="m_op3" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="540" as="sourcePoint" />
+            <mxPoint x="525" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3fW8cegxriEx2bQQTEbL-6" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="530" y="560" as="sourcePoint" />
+            <mxPoint x="10" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3fW8cegxriEx2bQQTEbL-7" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="10" y="560" as="sourcePoint" />
+            <mxPoint x="10" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3fW8cegxriEx2bQQTEbL-8" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="m_while" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="10" y="260" as="sourcePoint" />
+            <mxPoint x="380" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_f1" name="2.1 explorar_directorio">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_2" value="Inicio: explorar_directorio()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_3" value="Leer carpeta = Path(input(&quot;Ruta de la carpeta: &quot;))" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="110" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_2" target="c_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_5" value="¿carpeta.exists()?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="150" y="189" width="200" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_3" target="c_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_7" value="Imprimir &quot;La carpeta no existe.&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="450" y="198" width="200" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="c_8" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_7" target="c_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_10" value="Ciclo: Para cada archivo &quot;a&quot; en carpeta.iterdir()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="280" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_11" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_12" value="¿Termina en &quot;.txt&quot; o &quot;.csv&quot;?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="150" y="359" width="200" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c_13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_10" target="c_12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_14" value="Ignorar archivo" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="450" y="368" width="200" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="c_15" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_12" target="c_14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_14" target="c_12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_17" value="Imprimir &quot;-&quot;, a" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="450" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_18" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_12" target="c_17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_19" value="Fin de función" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="165" y="529" width="170" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_17" target="c_19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_f2" name="2.2 contar_palabras">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_2" value="Inicio: contar_palabras(lineas)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_3" value="Definir lista &quot;conectores&quot;&#xa;Crear diccionario vacío conteo = {}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="110" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_2" target="c_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_5" value="Ciclo: Recorrer cada línea y cada palabra en minúsculas" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="189" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_3" target="c_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_7" value="Limpiar signos y números con .strip(...) -&gt; guardar en &quot;w&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="268" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_9" value="¿w != &quot;&quot; y w no en conectores?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="150" y="347" width="200" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_7" target="c_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_11" value="Omitir palabra" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="450" y="356" width="200" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="c_12" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_9" target="c_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_11" target="c_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_14" value="Sumar 1 a conteo[w] = conteo.get(w, 0) + 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="438" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_15" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_9" target="c_14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_16" value="Guardar pares [conteo[w], w] en lista &quot;pares&quot;&#xa;Ordenar de mayor a menor: pares.sort(reverse=True)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="517" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_14" target="c_16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_18" value="Retornar pares" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="165" y="596" width="170" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_16" target="c_18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_f3" name="2.3 resumen_txt">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_2" value="Inicio: resumen_txt(lineas)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_3" value="Inicializar contadores: pal = 0, con_esp = 0, sin_esp = 0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="110" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_2" target="c_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_5" value="Ciclo: Para cada línea &quot;l&quot; en lineas:&#xa;Sumar palabras len(l.split()), caracteres con y sin espacios" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="189" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_3" target="c_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_7" value="Imprimir total de líneas, palabras,&#xa;caracteres con y sin espacios" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="268" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_9" value="Obtener Top 5 llamando a contar_palabras(lineas)[:5]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="347" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_7" target="c_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_11" value="Ciclo: Imprimir cada palabra y su cantidad del Top 5" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="426" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_9" target="c_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_13" value="Fin de función" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="165" y="505" width="170" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_11" target="c_13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_f4" name="2.4 patrones_txt">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_2" value="Inicio: patrones_txt(lineas)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_3" value="Leer pat = input(&quot;Fecha o patron a buscar: &quot;)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="110" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_2" target="c_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_5" value="Inicializar contadores: err = 0, e404 = 0, busq = 0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="189" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_3" target="c_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_7" value="Ciclo: Para cada línea &quot;l&quot; en lineas:&#xa;Si &quot;ERROR&quot; in l -&gt; err += 1 | Si &quot;404&quot; in l -&gt; e404 += 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="268" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_9" value="¿pat != &quot;&quot; y pat in l?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="150" y="347" width="200" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_7" target="c_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_11" value="No sumar a busq" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="450" y="356" width="200" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="c_12" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_9" target="c_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_11" target="c_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_14" value="Incrementar busq = busq + 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="438" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_15" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_9" target="c_14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_16" value="Imprimir conteos finales de ERROR, 404 y Patron buscado" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="517" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_14" target="c_16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_18" value="Fin de función" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="165" y="596" width="170" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_16" target="c_18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_f5" name="2.5 grafico_barh">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_2" value="Inicio: grafico_barh(lineas)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_3" value="Crear listas vacías: pal = [], cant = []" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="110" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_2" target="c_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_5" value="Ciclo: Para cada item en contar_palabras(lineas)[:10]:&#xa;Agregar cantidad a cant y palabra a pal" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="189" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_3" target="c_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_7" value="Generar gráfico de barras horizontales: plt.barh(pal, cant)&#xa;Configurar plt.title(), plt.xlabel() y plt.ylabel()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="268" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_9" value="Guardar imagen en outputs/grafico1_frecuencia.png&#xa;Mostrar ventana con plt.show()" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="347" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_7" target="c_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_11" value="Fin de función" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="165" y="426" width="170" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_9" target="c_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_f6" name="2.6 grafico_hist">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_2" value="Inicio: grafico_hist(lineas)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_3" value="Crear lista vacía: largos = []" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="110" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_2" target="c_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_5" value="Ciclo: Para cada línea &quot;l&quot; en lineas:&#xa;Agregar longitud sin salto de línea: len(l.strip(&quot;\n&quot;))" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="189" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_3" target="c_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_7" value="Generar histograma por rangos de 50 en 50:&#xa;plt.hist(largos, bins=[0, 50, 100, 150, 200])" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="268" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_9" value="Configurar plt.title(), plt.xlabel() y plt.ylabel()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="347" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_7" target="c_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_11" value="Guardar imagen en outputs/grafico2_longitud.png&#xa;Mostrar ventana con plt.show()" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="426" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_9" target="c_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_13" value="Fin de función" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="165" y="505" width="170" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_11" target="c_13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_f7" name="2.7 submenu_txt">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_2" value="Inicio: submenu_txt()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_3" value="Pedir ruta del archivo .txt e intentar abrir con open(..., &quot;r&quot;)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="110" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_2" target="c_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_5" value="¿Existe el archivo? (try/except)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="150" y="189" width="200" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_3" target="c_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_7" value="Imprimir error y salir" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="450" y="198" width="200" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="c_8" value="Error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_9" value="Guardar todas las líneas con lineas = f.readlines()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="280" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_10" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_11" value="Ciclo: ¿op != &quot;5&quot;?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="150" y="359" width="200" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c_12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_9" target="c_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_13" value="Volver al Menú Principal" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="450" y="368" width="200" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="c_14" value="No (op==5)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_11" target="c_13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_15" value="Leer opción op (1.Resumen, 2.Patrones,&#xa;3.barh, 4.hist, 5.Volver)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="450" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_16" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_11" target="c_15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_17" value="Ejecutar la función correspondiente según op (1, 2, 3 o 4)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="529" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_15" target="c_17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_19" value="Fin de función" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="165" y="608" width="170" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_17" target="c_19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_f8" name="3.1 elegir_col">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_2" value="Inicio: elegir_col(enc)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_3" value="Ciclo: Recorrer índices con for i in range(len(enc))" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="110" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_2" target="c_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_5" value="Imprimir número de índice y nombre: i, &quot;-&gt;&quot;, enc[i]" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="189" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_3" target="c_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_7" value="Leer número elegido por el usuario:&#xa;int(input(&quot;Numero de columna: &quot;))" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="268" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_9" value="Retornar índice entero" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="165" y="347" width="170" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_7" target="c_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_f9" name="3.2 estadisticas_csv">
+    <mxGraphModel dx="1157" dy="631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" value="Inicio: estadisticas_csv(enc, filas)" vertex="1">
+          <mxGeometry height="36" width="180" x="160" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c_3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="Pedir columna con col = elegir_col(enc)&#xa;Crear lista vacía datos = []" vertex="1">
+          <mxGeometry height="44" width="260" x="120" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c_4" edge="1" parent="1" source="c_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="c_3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="Ciclo: Recorrer cada fila &quot;f&quot; en filas:&#xa;Intentar convertir float(f[col]) con try / except ValueError" vertex="1">
+          <mxGeometry height="44" width="260" x="120" y="189" as="geometry" />
+        </mxCell>
+        <mxCell id="c_6" edge="1" parent="1" source="c_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="c_5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="Ordenar lista de menor a mayor: datos.sort()&#xa;y obtener cantidad de válidos n = len(datos)" vertex="1">
+          <mxGeometry height="44" width="260" x="120" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="c_8" edge="1" parent="1" source="c_5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="c_7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_9" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="¿n == 0 (sin datos)?" vertex="1">
+          <mxGeometry height="56" width="200" x="150" y="347" as="geometry" />
+        </mxCell>
+        <mxCell id="c_10" edge="1" parent="1" source="c_7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="c_9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_11" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="Imprimir aviso y salir" vertex="1">
+          <mxGeometry height="38" width="200" x="450" y="356" as="geometry" />
+        </mxCell>
+        <mxCell id="c_12" edge="1" parent="1" source="c_9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="c_11" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="Calcular mediana (central si n es impar, o promedio&#xa;de los 2 centrales si es par), promedio, max y min" vertex="1">
+          <mxGeometry height="44" width="260" x="120" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="c_14" edge="1" parent="1" source="c_9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="c_13" value="No">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_15" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" value="Imprimir Válidos, Promedio, Mediana, Máximo y Mínimo" vertex="1">
+          <mxGeometry height="44" width="260" x="120" y="517" as="geometry" />
+        </mxCell>
+        <mxCell id="c_16" edge="1" parent="1" source="c_13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="c_15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" value="Fin de función" vertex="1">
+          <mxGeometry height="36" width="170" x="165" y="596" as="geometry" />
+        </mxCell>
+        <mxCell id="c_18" edge="1" parent="1" source="c_15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" target="c_17" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_f10" name="3.3 grafico_plot">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_2" value="Inicio: grafico_plot(enc, filas)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_3" value="Seleccionar columna Eje X: cx = elegir_col(enc)&#xa;Seleccionar columna Eje Y: cy = elegir_col(enc)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="110" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_2" target="c_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_5" value="Ciclo: Recorrer filas e intentar convertir float(f[cy])&#xa;con try / except ValueError para limpiar vacíos" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="189" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_3" target="c_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_7" value="Dibujar gráfico de línea: plt.plot(x, y)&#xa;Agregar título y etiquetas de ejes X y Y" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="268" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_9" value="Guardar imagen en outputs/grafico3_tendencia.png&#xa;Mostrar gráfico con plt.show()" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="347" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_7" target="c_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_11" value="Fin de función" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="165" y="426" width="170" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_9" target="c_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_f11" name="3.4 grafico_pie">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_2" value="Inicio: grafico_pie(enc, filas)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_3" value="Seleccionar columna categórica: col = elegir_col(enc)&#xa;Crear diccionario vacío conteo = {}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="110" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_2" target="c_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_5" value="Ciclo: Para cada fila &quot;f&quot; en filas (si f[col] != &quot;&quot;):&#xa;Sumar 1 a la categoría en el diccionario conteo" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="189" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_3" target="c_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_7" value="Generar gráfico de pastel con porcentajes:&#xa;plt.pie(vals, labels=keys, autopct=&quot;%1.1f%%&quot;)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="268" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_9" value="Guardar imagen en outputs/grafico4_pastel.png&#xa;Mostrar gráfico con plt.show()" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="347" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_7" target="c_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_11" value="Fin de función" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="165" y="426" width="170" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_9" target="c_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_f12" name="3.5 grafico_scatter">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_2" value="Inicio: grafico_scatter(enc, filas)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_3" value="Seleccionar 1ra columna numérica: cx = elegir_col(enc)&#xa;Seleccionar 2da columna numérica: cy = elegir_col(enc)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="110" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_2" target="c_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_5" value="Ciclo: Recorrer filas y convertir ambos valores float(f[cx])&#xa;y float(f[cy]) usando try / except ValueError" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="189" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_3" target="c_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_7" value="Generar gráfico de dispersión: plt.scatter(x, y)&#xa;Configurar título y nombres de los ejes X y Y" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="268" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_9" value="Guardar imagen en outputs/grafico5_dispersion.png&#xa;Mostrar gráfico con plt.show()" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="347" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_7" target="c_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_11" value="Fin de función" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="165" y="426" width="170" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_9" target="c_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="diag_f13" name="3.6 submenu_csv">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c_2" value="Inicio: submenu_csv()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="180" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_3" value="Pedir ruta del archivo .csv y abrir con open(..., newline=&quot;&quot;)&#xa;Crear lector = csv.reader(f, delimiter=&quot;,&quot;)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="110" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_2" target="c_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_5" value="¿Existe el archivo? (try/except)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="150" y="189" width="200" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c_6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_3" target="c_5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_7" value="Imprimir error y salir" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="450" y="198" width="200" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="c_8" value="Error" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_9" value="Extraer encabezados enc = next(lector) y filas = list(lector)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="280" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_10" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_5" target="c_9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_11" value="Ciclo: ¿op != &quot;6&quot;?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="150" y="359" width="200" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="c_12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_9" target="c_11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_13" value="Volver al Menú Principal" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="450" y="368" width="200" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="c_14" value="No (op==6)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_11" target="c_13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_15" value="Leer opción op (1.Vista Previa, 2.Estadísticas,&#xa;3.plot, 4.pie, 5.scatter, 6.Volver)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=12;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="450" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_16" value="Sí" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_11" target="c_15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_17" value="Si op == &quot;1&quot; mostrar primeras 10 y últimas 5 filas;&#xa;si op es 2..5 llamar a su función correspondiente" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;strokeWidth=1.5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="529" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c_18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_15" target="c_17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_19" value="Fin de función" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=11;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="165" y="608" width="170" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c_20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;strokeWidth=1.5;endArrow=classic;fontSize=10;fontColor=#000000;fontStyle=1;" edge="1" parent="1" source="c_17" target="c_19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
